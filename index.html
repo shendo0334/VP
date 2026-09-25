@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vattaparambil Gold and Diamonds | VP Jewellery - Crafted for Those Who Savor</title>
+  <meta name="description" content="Discover Vattaparambil Gold and Diamonds (VP Jewellery). Ultra-premium handcrafted 22K gold, certified diamonds, and exclusive gold schemes designed for connoisseurs of timeless luxury." />
+  <meta name="keywords" content="Vattaparambil Gold and Diamonds, VP Jewellery, luxury gold, 22K BIS hallmarked jewelry, diamond necklace, gold scheme, Kerala jewelry" />
+  <meta property="og:title" content="Vattaparambil Gold and Diamonds | VP Jewellery" />
+  <meta property="og:description" content="Crafted for Those Who Savor. Experience authentic heritage craftsmanship and modern jewelry design." />
+  <meta property="og:image" content="assets/images/hero_jewelry.jpg" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Google Fonts: Cormorant Garamond (Serif), Cinzel (Royal Accent), Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Top Hallmark & Live Gold Rate Bar -->
+  <aside class="gold-ticker" aria-label="Live Gold Rates">
+    <div class="gold-ticker__inner">
+      <div class="gold-ticker__badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+        </svg>
+        <span id="ticker-standard">BIS 916 HUID Hallmarked Purity</span>
+      </div>
+      <div class="gold-ticker__rates">
+        <span class="gold-ticker__item">
+          <span class="gold-ticker__live" aria-hidden="true"></span>
+          22K Gold (1g): <strong id="ticker-rate-22k">₹6,850</strong>
+        </span>
+        <span class="gold-ticker__item">
+          24K Pure (1g): <strong id="ticker-rate-24k">₹7,470</strong>
+        </span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Primary Site Header & Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" id="header-brand-logo" aria-label="VP Jewellery Home">
+        <div class="brand-logo__crest" aria-hidden="true">VP</div>
+        <div class="brand-logo__text-box">
+          <span class="brand-logo__name">Vattaparambil</span>
+          <span class="brand-logo__tag">Gold &amp; Diamonds</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="#collections" class="nav-link" id="nav-link-collections">Collections</a>
+        <a href="#story" class="nav-link" id="nav-link-story">Heritage</a>
+        <a href="#pillars" class="nav-link" id="nav-link-pillars">Craftsmanship</a>
+        <a href="#why-us" class="nav-link" id="nav-link-why">Why Us</a>
+        <a href="#app" class="nav-link" id="nav-link-scheme">Gold Scheme</a>
+      </nav>
+
+      <!-- Desktop Actions -->
+      <div class="nav-actions">
+        <button type="button" class="btn btn-outline btn-sm js-scheme-btn" id="nav-btn-scheme">
+          Join Scheme
+        </button>
+        <button type="button" class="btn btn-primary btn-sm js-shop-btn" id="nav-btn-shop">
+          Explore App
+        </button>
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="mobile-toggle__bar"></span>
+          <span class="mobile-toggle__bar"></span>
+          <span class="mobile-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#collections" class="nav-link">Signature Collections</a>
+      <a href="#story" class="nav-link">Heritage &amp; Brand Story</a>
+      <a href="#pillars" class="nav-link">Craftsmanship Pillars</a>
+      <a href="#why-us" class="nav-link">Why Choose Us</a>
+      <a href="#app" class="nav-link">VP Mobile App &amp; Gold Scheme</a>
+      <div style="margin-top: var(--space-4); display: flex; flex-direction: column; gap: var(--space-2);">
+        <button type="button" class="btn btn-primary js-shop-btn" style="width: 100%;">
+          Shop In App →
+        </button>
+        <button type="button" class="btn btn-outline js-scheme-btn" style="width: 100%;">
+          Join Gold Scheme
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ====================================================================
+         1. HERO SECTION
+         Full viewport height, large placeholder for animated content, tagline
+         ==================================================================== -->
+    <section class="hero-section" id="hero" aria-label="Hero Introduction">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="hero-ambient-glow" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <!-- Hero Editorial Text -->
+        <div class="hero-content reveal-on-scroll">
+          <span class="hero-eyebrow">The Royal House of Vattaparambil</span>
+          <h1 class="hero-tagline">
+            Crafted for Those Who <span class="gold-text">Savor</span>
+          </h1>
+          <p class="hero-description">
+            Where generations of master artistry meet contemporary luxury. Adorn yourself in certified 22K gold and ethically sourced diamonds crafted for life’s rarest milestones.
+          </p>
+          <div class="hero-actions">
+            <button type="button" class="btn btn-primary btn-lg js-shop-btn" id="hero-cta-shop">
+              Explore Collection
+            </button>
+            <button type="button" class="btn btn-outline-light btn-lg js-scheme-btn" id="hero-cta-scheme">
+              Join Gold Scheme
+            </button>
+          </div>
+          <div class="hero-trust-row">
+            <div class="hero-trust-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A24A" aria-hidden="true">
+                <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM10 16L6 12L7.41 10.59L10 13.17L16.59 6.58L18 8L10 16Z"/>
+              </svg>
+              <span>100% BIS 916 Hallmarked</span>
+            </div>
+            <div class="hero-trust-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A24A" aria-hidden="true">
+                <path d="M12 2L1 21H23L12 2ZM12 6L19.53 19H4.47L12 6Z"/>
+              </svg>
+              <span>Certified Natural Diamonds</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Layered Visual Container (Scroll-Animation Ready Canvas) -->
+        <div class="hero-visual-stage reveal-on-scroll" id="hero-animation-stage">
+          <div class="hero-media-wrapper" id="hero-media-canvas" data-scroll-layer="media">
+            <img 
+              src="assets/images/hero_jewelry.jpg" 
+              alt="Vattaparambil Gold & Diamonds Royal Bridal Choker" 
+              class="hero-image"
+              id="hero-main-visual"
+            />
+            <div class="hero-floating-badge" id="hero-floating-badge">
+              <span class="hero-floating-badge__subtitle">Couture Edition</span>
+              <strong class="hero-floating-badge__title">The Royal Choker</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtle Scroll Indicator -->
+      <div class="hero-footer">
+        <a href="#collections" class="scroll-indicator" id="hero-scroll-indicator" aria-label="Scroll down to explore collection">
+          <span class="scroll-indicator__mouse">
+            <span class="scroll-indicator__wheel"></span>
+          </span>
+          <span>Scroll to Discover</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         2. PRODUCT SHOWCASE SECTION
+         Grid of product cards, elegant prices, hover effects, shop redirect
+         ==================================================================== -->
+    <section class="section-padding bg-ivory" id="collections" aria-label="Signature Collections">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-header__subtitle">Curated Masterpieces</span>
+          <h2 class="section-header__title">Signature Collections</h2>
+          <div class="section-header__divider" aria-hidden="true">
+            <span class="section-header__divider-line"></span>
+            <span class="section-header__divider-diamond"></span>
+            <span class="section-header__divider-line"></span>
+          </div>
+          <p class="section-header__desc">
+            Each creation is an exquisite balance of heritage technique and modern silhouette, designed to be treasured for generations.
+          </p>
+        </header>
+
+        <!-- Category Filter Tabs -->
+        <div class="category-filter reveal-on-scroll" role="tablist" aria-label="Collection categories">
+          <button type="button" class="filter-btn is-active" data-filter="all" id="filter-all">All Masterpieces</button>
+          <button type="button" class="filter-btn" data-filter="necklaces" id="filter-necklaces">Necklaces &amp; Chokers</button>
+          <button type="button" class="filter-btn" data-filter="rings" id="filter-rings">Rings &amp; Solitaires</button>
+        </div>
+
+        <!-- Dynamic Product Grid -->
+        <div class="product-grid" id="product-grid-container">
+          <!-- Populated dynamically via js/main.js with fallback support -->
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-8);" class="reveal-on-scroll">
+          <button type="button" class="btn btn-outline btn-lg js-shop-btn" id="showcase-view-all">
+            View Complete Collection in App →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. BRAND STORY SECTION
+         Craftsmanship, heritage, 2-3 sentences origin story, elegant image
+         ==================================================================== -->
+    <section class="section-padding bg-off-white" id="story" aria-label="Brand Story and Heritage">
+      <div class="container">
+        <div class="story-grid">
+          <!-- Single Elegant Image Placeholder Container -->
+          <div class="story-media-box reveal-on-scroll" id="story-media-wrapper">
+            <div class="story-media-box__ornament" aria-hidden="true"></div>
+            <img 
+              src="assets/images/artisan_heritage.jpg" 
+              alt="Vattaparambil master goldsmith carefully shaping an intricate gold ornament"
+              id="story-artisan-image"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Narrative Content -->
+          <div class="story-content reveal-on-scroll">
+            <header>
+              <span class="section-header__subtitle" style="text-align: left;">Generations of Trust</span>
+              <h2 class="section-header__title" style="text-align: left; font-size: clamp(2rem, 3.5vw, 3rem);">
+                The Legacy of Vattaparambil
+              </h2>
+            </header>
+            <blockquote class="story-quote">
+              "True luxury is not merely worn; it is inherited, remembered, and deeply savored."
+            </blockquote>
+            <p class="story-text">
+              Born from a steadfast commitment to purity and traditional goldsmithing, Vattaparambil Gold and Diamonds has spent decades crafting heirloom treasures for families who cherish authentic artistry. Every silhouette reflects the rich cultural cadence of South Indian royalty paired with the exacting precision of modern gemology.
+            </p>
+            <p class="story-text">
+              From hand-drawn sketches to the final laser hallmark, our master artisans pour hundreds of hours into each piece, ensuring that your jewelry carries both emotional weight and timeless permanence.
+            </p>
+            <div class="story-hallmarks">
+              <div class="story-hallmark-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#C9A24A" aria-hidden="true">
+                  <path d="M12 2L15 8L21 9L17 14L18 20L12 17L6 20L7 14L3 9L9 8L12 2Z"/>
+                </svg>
+                <div>
+                  <strong>30+ Years</strong>
+                  <div style="font-size: 0.75rem; color: var(--color-text-muted);">Heritage Excellence</div>
+                </div>
+              </div>
+              <div class="story-hallmark-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#C9A24A" aria-hidden="true">
+                  <path d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z"/>
+                </svg>
+                <div>
+                  <strong>100% Purity</strong>
+                  <div style="font-size: 0.75rem; color: var(--color-text-muted);">HUID BIS 916 Guaranteed</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. FEATURES / PILLARS SECTION
+         Three pillars displayed horizontally
+         ==================================================================== -->
+    <section class="section-padding bg-ivory" id="pillars" aria-label="Brand Pillars">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-header__subtitle">Uncompromising Principles</span>
+          <h2 class="section-header__title">Our Craftsmanship Pillars</h2>
+          <div class="section-header__divider" aria-hidden="true">
+            <span class="section-header__divider-line"></span>
+            <span class="section-header__divider-diamond"></span>
+            <span class="section-header__divider-line"></span>
+          </div>
+          <p class="section-header__desc">
+            The foundation of every piece that bears the Vattaparambil seal.
+          </p>
+        </header>
+
+        <div class="pillars-grid">
+          <!-- Pillar 1 -->
+          <article class="feature-card reveal-on-scroll" id="pillar-sourcing">
+            <div class="feature-card__icon-box" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3L2 12H5V20H19V12H22L12 3M12 7.7L16 11.3V18H8V11.3L12 7.7Z"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Ethically Sourced Gold &amp; Diamonds</h3>
+            <p class="feature-card__desc">
+              We procure only ethically mined, conflict-free Kimberly Process certified natural diamonds and certified bullion, ensuring responsible luxury that respects the earth.
+            </p>
+          </article>
+
+          <!-- Pillar 2 -->
+          <article class="feature-card reveal-on-scroll" id="pillar-craft">
+            <div class="feature-card__icon-box" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M15.5 11C16.33 11 17 10.33 17 9.5S16.33 8 15.5 8 14 8.67 14 9.5 14.67 11 15.5 11M8.5 11C9.33 11 10 10.33 10 9.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11M12 17.5C14.33 17.5 16.32 16.05 17.11 14H6.89C7.68 16.05 9.67 17.5 12 17.5Z"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Handcrafted Artisan Process</h3>
+            <p class="feature-card__desc">
+              Small-batch production guided by generational master goldsmiths. Every filigree, setting, and antique finish is sculpted by hand with artisanal intimacy.
+            </p>
+          </article>
+
+          <!-- Pillar 3 -->
+          <article class="feature-card reveal-on-scroll" id="pillar-purity">
+            <div class="feature-card__icon-box" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1M12 7C13.66 7 15 8.34 15 10C15 11.66 13.66 13 12 13C10.34 13 9 11.66 9 10C9 8.34 10.34 7 12 7M12 15C14.67 15 17 16.12 17 17.5V19.19C15.65 20.34 13.9 21 12 21C10.1 21 8.35 20.34 7 19.19V17.5C7 16.12 9.33 15 12 15Z"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Certified Authenticity &amp; Purity</h3>
+            <p class="feature-card__desc">
+              Every single gram of gold carries government-approved 916 HUID laser hallmarking, complemented by internationally recognized grading certificates for our diamond suites.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. WHY CHOOSE US
+         Communicating key brand differentiators
+         ==================================================================== -->
+    <section class="section-padding bg-off-white" id="why-us" aria-label="Why Choose VP Jewellery">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-header__subtitle">The VP Distinction</span>
+          <h2 class="section-header__title">Why Choose Vattaparambil</h2>
+          <div class="section-header__divider" aria-hidden="true">
+            <span class="section-header__divider-line"></span>
+            <span class="section-header__divider-diamond"></span>
+            <span class="section-header__divider-line"></span>
+          </div>
+          <p class="section-header__desc">
+            A boutique relationship founded on integrity, transparency, and lifelong client privilege.
+          </p>
+        </header>
+
+        <div class="why-us-grid">
+          <div class="trust-card reveal-on-scroll">
+            <div class="trust-card__num">01</div>
+            <h3 class="trust-card__title">Lifetime Exchange</h3>
+            <p class="trust-card__desc">Enjoy transparent guaranteed exchange values on all 22K gold and diamond jewelry across our network.</p>
+          </div>
+          <div class="trust-card reveal-on-scroll">
+            <div class="trust-card__num">02</div>
+            <h3 class="trust-card__title">Insured Transit</h3>
+            <p class="trust-card__desc">Every creation delivered directly to your doorstep with 100% full-value insurance coverage and tamper-evident packaging.</p>
+          </div>
+          <div class="trust-card reveal-on-scroll">
+            <div class="trust-card__num">03</div>
+            <h3 class="trust-card__title">Bespoke Customization</h3>
+            <p class="trust-card__desc">Collaborate 1-on-1 with our master jewelry designers to create bespoke bridal suites and personalized heirlooms.</p>
+          </div>
+          <div class="trust-card reveal-on-scroll">
+            <div class="trust-card__num">04</div>
+            <h3 class="trust-card__title">Transparent Pricing</h3>
+            <p class="trust-card__desc">Clear breakups of gold weight, stone weight, making charges, and hallmarking fees on every certificate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. APP PROMOTION & GOLD SCHEME
+         Convert visitors to app users & Gold Scheme participants
+         ==================================================================== -->
+    <section class="section-padding app-promo-section" id="app" aria-label="Mobile App and Gold Scheme Promotion">
+      <div class="container">
+        <div class="app-promo-grid">
+          <!-- Smartphone Mockup Visual -->
+          <div class="app-promo-visual reveal-on-scroll">
+            <div class="app-mockup-wrapper" id="app-mockup-container">
+              <img 
+                src="assets/images/app_mockup.jpg" 
+                alt="VP Jewellery Mobile Application interface showing gold savings scheme and luxury collections"
+                class="app-mockup-image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <!-- Promotion Content -->
+          <div class="app-content reveal-on-scroll">
+            <header>
+              <span class="section-header__subtitle" style="text-align: left; color: var(--color-secondary);">
+                Smart Luxury On Your Device
+              </span>
+              <h2 class="app-title">
+                Your Jewelry Collection, One Tap Away.
+              </h2>
+            </header>
+            <p style="font-size: 1.0625rem; color: #D1CEC7; line-height: 1.7;">
+              Discover the entire Vattaparambil collection, track daily hallmark gold rates live, and grow your wealth effortlessly through our exclusive <strong>VP Gold Scheme</strong>.
+            </p>
+
+            <ul class="app-benefits-list">
+              <li class="app-benefit-item">
+                <svg class="app-benefit-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z"/>
+                </svg>
+                <span><strong>Flexible Gold Scheme:</strong> Invest monthly with bonus maturity incentives and zero making-charge benefits.</span>
+              </li>
+              <li class="app-benefit-item">
+                <svg class="app-benefit-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z"/>
+                </svg>
+                <span><strong>App-Only Private Previews:</strong> Early access to limited edition couture launches and festive bridal exhibitions.</span>
+              </li>
+              <li class="app-benefit-item">
+                <svg class="app-benefit-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z"/>
+                </svg>
+                <span><strong>Instant Digital Invoicing:</strong> Track your certificates, gold weight accumulations, and lifetime service records.</span>
+              </li>
+            </ul>
+
+            <div style="margin-top: var(--space-2); display: flex; flex-wrap: wrap; gap: var(--space-3);">
+              <button type="button" class="btn btn-primary btn-lg js-scheme-btn" id="app-cta-join-scheme">
+                Join Gold Scheme →
+              </button>
+              <button type="button" class="btn btn-outline-light btn-lg js-shop-btn" id="app-cta-browse">
+                Browse Full Catalog
+              </button>
+            </div>
+
+            <!-- App Store Badges -->
+            <div class="app-download-buttons">
+              <a href="#" class="store-badge-btn js-app-btn" id="badge-apple" aria-label="Download VP Jewellery on Apple App Store">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.13 16.69C20.11 16.76 19.72 18.1 18.71 19.5ZM15.97 4.54C16.65 3.71 17.11 2.56 16.98 1.4C16 1.44 14.75 2.06 14.07 2.86C13.46 3.56 12.94 4.74 13.09 5.87C14.21 5.96 15.3 5.37 15.97 4.54Z"/>
+                </svg>
+                <div class="store-badge-btn__text">
+                  <span class="store-badge-btn__small">Available on the</span>
+                  <span class="store-badge-btn__store">App Store</span>
+                </div>
+              </a>
+
+              <a href="#" class="store-badge-btn js-app-btn" id="badge-google" aria-label="Get VP Jewellery on Google Play">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5ZM16.81 15.12L18.81 16.27C19.88 16.88 19.88 17.88 18.81 18.49L6.05 25.85L15.15 16.76L16.81 15.12ZM20.16 10.81C20.66 11.1 20.95 11.53 20.95 12C20.95 12.47 20.66 12.9 20.16 13.19L17.89 14.5L15.15 11.76L17.89 9.02L20.16 10.81ZM6.05 4.15L18.81 11.51C19.88 12.12 19.88 13.12 18.81 13.73L16.81 14.88L15.15 13.24L6.05 4.15Z"/>
+                </svg>
+                <div class="store-badge-btn__text">
+                  <span class="store-badge-btn__small">Get it on</span>
+                  <span class="store-badge-btn__store">Google Play</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       7. FOOTER
+       Minimal footer with logo, nav links, social media icons, copyright
+       ==================================================================== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo" aria-label="VP Jewellery Home">
+            <div class="brand-logo__crest" aria-hidden="true">VP</div>
+            <div class="brand-logo__text-box">
+              <span class="brand-logo__name">Vattaparambil</span>
+              <span class="brand-logo__tag" style="color: var(--color-secondary);">Gold &amp; Diamonds</span>
+            </div>
+          </a>
+          <p class="footer-bio">
+            Preserving South India’s magnificent jewelry heritage with pure 916 hallmarked gold, certified diamonds, and exemplary bespoke craftsmanship.
+          </p>
+          <div class="footer-social-links">
+            <!-- Instagram Link from requirements -->
+            <a 
+              href="https://www.instagram.com/vp_goldanddiamonds?stkn=MXRuODI2emdmdTZvYQ%3D%3D&utm_source=qr" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="social-icon-btn" 
+              id="footer-social-instagram"
+              aria-label="Follow VP Gold and Diamonds on Instagram"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <!-- WhatsApp Concierge Link -->
+            <a 
+              href="https://wa.me/919846000000" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="social-icon-btn" 
+              id="footer-social-whatsapp"
+              aria-label="Chat with VP Jewellery concierge on WhatsApp"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.3C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Collections Links -->
+        <div>
+          <h4 class="footer-title">Collections</h4>
+          <ul class="footer-links">
+            <li><a href="#collections" class="footer-link">Midnight Reserve</a></li>
+            <li><a href="#collections" class="footer-link">Golden Truffle Suite</a></li>
+            <li><a href="#collections" class="footer-link">Cacao Noir Diamonds</a></li>
+            <li><a href="#collections" class="footer-link">Royal Bridal Sets</a></li>
+            <li><a href="#collections" class="footer-link">Temple Antique Gold</a></li>
+          </ul>
+        </div>
+
+        <!-- Experience & Trust Links -->
+        <div>
+          <h4 class="footer-title">Experience</h4>
+          <ul class="footer-links">
+            <li><a href="#story" class="footer-link">Heritage &amp; History</a></li>
+            <li><a href="#pillars" class="footer-link">Artisan Craftsmanship</a></li>
+            <li><a href="#why-us" class="footer-link">Hallmark Guarantee</a></li>
+            <li><a href="#app" class="footer-link">VP Gold Scheme</a></li>
+            <li><a href="#app" class="footer-link">Download Mobile App</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Boutique Info -->
+        <div>
+          <h4 class="footer-title">Boutique Inquiries</h4>
+          <p style="font-size: 0.875rem; color: #A3A09A; line-height: 1.6; margin-bottom: var(--space-2);">
+            Visit our flagship showrooms across Kerala or connect with our private bridal concierge for appointments.
+          </p>
+          <div style="font-size: 0.875rem; color: var(--color-primary-light); font-weight: var(--weight-medium);">
+            <span>Concierge: +91 98460 00000</span><br />
+            <span>Email: concierge@vpjewellery.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          <span>&copy; <span id="copyright-year">2026</span> VP Jewellery. All rights reserved.</span>
+        </div>
+        <div class="footer-certifications">
+          <span class="cert-tag">BIS 916 HALLMARKED</span>
+          <span class="cert-tag">HUID VERIFIED</span>
+          <span class="cert-tag">IGI / GIA CERTIFIED</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
