@@ -21,19 +21,26 @@ document.addEventListener('DOMContentLoaded', () => {
     hallmarkStandardEl.textContent = config.goldRates.hallmarkStandard;
   }
 
-  // 2. Render Product Cards Dynamically with Safe Fallbacks
+  // 2. Render Product Cards & Handle Switchable Collection Bar (Gold, Diamond, Silver, All)
   const productContainer = document.getElementById('product-grid-container');
-  if (productContainer && Array.isArray(config.products)) {
-    renderProductCards(config.products, 'all');
-  }
+  const collectionTabs = document.querySelectorAll('.collection-switch-tab');
 
-  function renderProductCards(products, filter = 'all') {
+  function renderProductCards(products, filter = 'gold') {
     if (!productContainer) return;
-    
+
     productContainer.innerHTML = '';
-    const filtered = filter === 'all' 
-      ? products 
+    const filtered = filter === 'all'
+      ? products
       : products.filter(p => p.category === filter);
+
+    if (filtered.length === 0) {
+      productContainer.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; color: var(--color-text-muted); padding: var(--space-6);">
+          <p>No pieces found in this category.</p>
+        </div>
+      `;
+      return;
+    }
 
     filtered.forEach(product => {
       const card = document.createElement('article');
@@ -63,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
               data-product-name="${product.name}"
               aria-label="Shop ${product.name} in App"
             >
-              Shop →
+              Shop Piece →
             </button>
           </div>
         </div>
@@ -72,68 +79,35 @@ document.addEventListener('DOMContentLoaded', () => {
       productContainer.appendChild(card);
     });
 
-    // Reattach redirect event listeners
+    // Reattach listeners to newly created card buttons
     attachRedirectListeners();
   }
 
-  // 3. Category Filter Tabs & Spotlight Card Interaction
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const spotlightCards = document.querySelectorAll('.collection-spotlight-card');
-
-  function setCategoryFilter(filterValue) {
-    // Update Filter Buttons active state
-    filterButtons.forEach(btn => {
-      if (btn.getAttribute('data-filter') === filterValue) {
-        btn.classList.add('is-active');
-      } else {
-        btn.classList.remove('is-active');
-      }
+  function setCollectionTab(filterValue) {
+    collectionTabs.forEach(tab => {
+      const isMatch = tab.getAttribute('data-filter') === filterValue;
+      tab.classList.toggle('is-active', isMatch);
+      tab.setAttribute('aria-selected', isMatch ? 'true' : 'false');
     });
 
-    // Update Spotlight Cards active state
-    spotlightCards.forEach(card => {
-      if (card.getAttribute('data-filter') === filterValue) {
-        card.classList.add('is-active');
-      } else {
-        card.classList.remove('is-active');
-      }
-    });
-
-    // Re-render matching products
     renderProductCards(config.products || [], filterValue);
   }
 
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const filterValue = btn.getAttribute('data-filter') || 'all';
-      setCategoryFilter(filterValue);
+  collectionTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const filterValue = tab.getAttribute('data-filter') || 'all';
+      setCollectionTab(filterValue);
     });
   });
 
-  spotlightCards.forEach(card => {
-    const handleSpotlightSelect = (e) => {
-      e.preventDefault();
-      const filterValue = card.getAttribute('data-filter') || 'all';
-      setCategoryFilter(filterValue);
-      
-      // Scroll to product grid container smoothly if below viewport
-      const targetGrid = document.getElementById('product-grid-container');
-      if (targetGrid) {
-        targetGrid.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-    };
+  // Initial render (defaulting to Gold collection)
+  if (productContainer && Array.isArray(config.products)) {
+    renderProductCards(config.products, 'gold');
+  }
 
-    card.addEventListener('click', handleSpotlightSelect);
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        handleSpotlightSelect(e);
-      }
-    });
-  });
-
-  // 4. Centralized Redirect Handlers for Shop and Gold Scheme Buttons
+  // 3. Centralized Redirect Handlers for Shop, Concierge and Gold Scheme Buttons
   function attachRedirectListeners() {
-    // Product "Shop" buttons
+    // Product & Collection "Shop / Inquiry" buttons
     document.querySelectorAll('.js-shop-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -168,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   attachRedirectListeners();
 
-  // 5. Update Dynamic Year in Footer
+  // 4. Update Dynamic Year in Footer
   const yearEl = document.getElementById('copyright-year');
   if (yearEl) {
     yearEl.textContent = config.brand?.copyrightYear || new Date().getFullYear();
