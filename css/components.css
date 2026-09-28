@@ -211,6 +211,170 @@
 }
 
 /* --------------------------------------------------------------------------
+   Collection Spotlight Cards (Gold, Diamond, Silver)
+   -------------------------------------------------------------------------- */
+.collection-spotlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+@media (max-width: 991px) {
+  .collection-spotlights-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+}
+
+.collection-spotlight-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--color-bg-dark-card);
+  border: 1px solid rgba(201, 162, 74, 0.25);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  text-align: left;
+  user-select: none;
+}
+
+.collection-spotlight-card:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+.collection-spotlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-gold-hover);
+}
+
+.collection-spotlight-card.is-active {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary), var(--shadow-gold);
+}
+
+.collection-spotlight-card__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.collection-spotlight-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-luxury);
+}
+
+.collection-spotlight-card:hover .collection-spotlight-card__media img {
+  transform: scale(1.08);
+}
+
+.collection-spotlight-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(18, 18, 18, 0.25) 0%, rgba(18, 18, 18, 0.7) 50%, rgba(18, 18, 18, 0.95) 100%);
+  z-index: 2;
+}
+
+.collection-spotlight-card__content {
+  position: relative;
+  z-index: 3;
+  margin-top: auto;
+  padding: var(--space-4);
+  color: var(--color-text-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.collection-spotlight-card__tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.6875rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px var(--space-1);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-1);
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+.collection-spotlight-card--gold .collection-spotlight-card__tag {
+  color: var(--color-secondary);
+  border: 1px solid rgba(201, 162, 74, 0.5);
+}
+
+.collection-spotlight-card--diamond .collection-spotlight-card__tag {
+  color: var(--color-diamond);
+  border: 1px solid rgba(182, 213, 242, 0.5);
+}
+
+.collection-spotlight-card--silver .collection-spotlight-card__tag {
+  color: var(--color-silver);
+  border: 1px solid rgba(224, 226, 229, 0.5);
+}
+
+.collection-spotlight-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.625rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-light);
+  margin-bottom: var(--space-1);
+  letter-spacing: 0.02em;
+}
+
+.collection-spotlight-card--gold .collection-spotlight-card__title {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.collection-spotlight-card--diamond .collection-spotlight-card__title {
+  background: var(--gradient-diamond);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.collection-spotlight-card--silver .collection-spotlight-card__title {
+  background: var(--gradient-silver);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.collection-spotlight-card__desc {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: rgba(249, 246, 239, 0.85);
+  margin-bottom: var(--space-2);
+}
+
+.collection-spotlight-card__link {
+  font-size: 0.75rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary-light);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  transition: transform var(--transition-fast);
+}
+
+.collection-spotlight-card:hover .collection-spotlight-card__link {
+  transform: translateX(4px);
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
    Product Cards
    -------------------------------------------------------------------------- */
 .product-card {
@@ -301,29 +465,14 @@
 .product-card__footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: var(--space-2);
   border-top: 1px solid rgba(201, 162, 74, 0.15);
   margin-top: auto;
 }
 
-.product-card__price-box {
-  display: flex;
-  flex-direction: column;
-}
-
-.product-card__price-label {
-  font-size: 0.6875rem;
-  color: var(--color-text-subtle);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.product-card__price {
-  font-family: var(--font-sans);
-  font-size: 1.125rem;
-  font-weight: var(--weight-bold);
-  color: var(--color-primary-dark);
+.product-card__footer .btn {
+  width: 100%;
 }
 
 /* --------------------------------------------------------------------------

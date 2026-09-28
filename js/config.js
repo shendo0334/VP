@@ -42,50 +42,66 @@ const VP_CONFIG = {
     lastUpdated: "Today, Live Market"
   },
 
-  // Curated Signature Collections
+  // Curated Signature Collections (Gold, Diamond, Silver)
   products: [
     {
-      id: "midnight-reserve",
-      name: "Midnight Reserve",
-      collection: "High Jewellery Edition",
-      category: "rings",
-      description: "Dramatic cushion-cut black diamond center with brilliant diamond pavé in 18K solid yellow gold.",
-      price: "₹1,85,000",
-      purity: "18K Gold • Natural Black Diamond",
-      image: "assets/images/midnight_reserve.jpg",
+      id: "vattaparambil-royal-choker",
+      name: "The Royal Bridal Choker",
+      collection: "Gold Collection",
+      category: "gold",
+      description: "Opulent ceremonial bridal necklace featuring unblemished emerald cabochons and uncut heritage gold halos.",
+      purity: "22K BIS Hallmarked Heritage Gold",
+      image: "assets/images/hero_jewelry.jpg",
       featured: true
     },
     {
       id: "golden-truffle",
-      name: "Golden Truffle Collection",
-      collection: "Heritage Temple Suite",
-      category: "necklaces",
+      name: "Golden Temple Suite",
+      collection: "Gold Collection",
+      category: "gold",
       description: "Intricately granulated 22K antique gold choker with Lakshmi motifs, emerald drops, and heirloom jhumkas.",
-      price: "₹4,20,000",
       purity: "BIS 916 22K Pure Gold",
       image: "assets/images/golden_truffle.jpg",
       featured: true
     },
     {
+      id: "midnight-reserve",
+      name: "Midnight Reserve Solitaire",
+      collection: "Diamond Collection",
+      category: "diamond",
+      description: "Dramatic cushion-cut black diamond center with brilliant diamond pavé in 18K solid yellow gold architecture.",
+      purity: "18K Gold • Natural Black Diamond",
+      image: "assets/images/midnight_reserve.jpg",
+      featured: true
+    },
+    {
       id: "cacao-noir",
-      name: "Cacao Noir",
-      collection: "Diamond Symphony",
-      category: "necklaces",
-      description: "Deep smoky champagne diamonds mounted in handcrafted 18K rose gold filigree architecture.",
-      price: "₹3,45,000",
-      purity: "18K Rose Gold • VVS Clarity",
+      name: "Cacao Noir Diamond Choker",
+      collection: "Diamond Collection",
+      category: "diamond",
+      description: "Deep smoky champagne diamonds mounted in handcrafted 18K rose gold filigree architecture with VVS clarity.",
+      purity: "18K Rose Gold • VVS Diamonds",
       image: "assets/images/cacao_noir.jpg",
       featured: true
     },
     {
-      id: "vattaparambil-bridal",
-      name: "The Vattaparambil Royal Choker",
-      collection: "Signature Masterpiece",
-      category: "necklaces",
-      description: "Opulent royal ceremonial necklace featuring unblemished emerald cabochons and uncut diamond halos.",
-      price: "Price on Request",
-      purity: "22K BIS Hallmarked Heritage Gold",
-      image: "assets/images/hero_jewelry.jpg",
+      id: "celestial-filigree-silver",
+      name: "Celestial Filigree Choker Set",
+      collection: "Silver Collection",
+      category: "silver",
+      description: "Mastercrafted 925 sterling silver bridal choker suite with regal crescent filigree, uncut stones, and pearls.",
+      purity: "925 Hallmarked Pure Silver",
+      image: "assets/images/silver_collection.jpg",
+      featured: true
+    },
+    {
+      id: "imperial-peacock-kadagam",
+      name: "Imperial Peacock Silver Cuff",
+      collection: "Silver Collection",
+      category: "silver",
+      description: "Heirloom handcrafted sterling silver kadagam cuff adorned with traditional embossed peacock engraving and emerald cabochons.",
+      purity: "925 Hallmarked Antique Silver",
+      image: "assets/images/silver_kadagam.jpg",
       featured: true
     }
   ]

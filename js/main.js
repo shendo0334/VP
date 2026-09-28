@@ -56,10 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
           <h3 class="product-card__title">${product.name}</h3>
           <p class="product-card__desc">${product.description}</p>
           <div class="product-card__footer">
-            <div class="product-card__price-box">
-              <span class="product-card__price-label">Indicative Price</span>
-              <span class="product-card__price">${product.price}</span>
-            </div>
             <button 
               type="button" 
               class="btn btn-primary btn-sm js-shop-btn" 
@@ -80,14 +76,58 @@ document.addEventListener('DOMContentLoaded', () => {
     attachRedirectListeners();
   }
 
-  // 3. Category Filter Tabs
+  // 3. Category Filter Tabs & Spotlight Card Interaction
   const filterButtons = document.querySelectorAll('.filter-btn');
+  const spotlightCards = document.querySelectorAll('.collection-spotlight-card');
+
+  function setCategoryFilter(filterValue) {
+    // Update Filter Buttons active state
+    filterButtons.forEach(btn => {
+      if (btn.getAttribute('data-filter') === filterValue) {
+        btn.classList.add('is-active');
+      } else {
+        btn.classList.remove('is-active');
+      }
+    });
+
+    // Update Spotlight Cards active state
+    spotlightCards.forEach(card => {
+      if (card.getAttribute('data-filter') === filterValue) {
+        card.classList.add('is-active');
+      } else {
+        card.classList.remove('is-active');
+      }
+    });
+
+    // Re-render matching products
+    renderProductCards(config.products || [], filterValue);
+  }
+
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('is-active'));
-      btn.classList.add('is-active');
       const filterValue = btn.getAttribute('data-filter') || 'all';
-      renderProductCards(config.products || [], filterValue);
+      setCategoryFilter(filterValue);
+    });
+  });
+
+  spotlightCards.forEach(card => {
+    const handleSpotlightSelect = (e) => {
+      e.preventDefault();
+      const filterValue = card.getAttribute('data-filter') || 'all';
+      setCategoryFilter(filterValue);
+      
+      // Scroll to product grid container smoothly if below viewport
+      const targetGrid = document.getElementById('product-grid-container');
+      if (targetGrid) {
+        targetGrid.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    };
+
+    card.addEventListener('click', handleSpotlightSelect);
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        handleSpotlightSelect(e);
+      }
     });
   });
 

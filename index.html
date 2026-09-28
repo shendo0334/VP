@@ -175,12 +175,12 @@
 
     <!-- ====================================================================
          2. PRODUCT SHOWCASE SECTION
-         Grid of product cards, elegant prices, hover effects, shop redirect
+         Grid of product cards, luxury details, hover effects, shop redirect
          ==================================================================== -->
     <section class="section-padding bg-ivory" id="collections" aria-label="Signature Collections">
       <div class="container">
         <header class="section-header reveal-on-scroll">
-          <span class="section-header__subtitle">Curated Masterpieces</span>
+          <span class="section-header__subtitle">Curated Precious Metals &amp; Stones</span>
           <h2 class="section-header__title">Signature Collections</h2>
           <div class="section-header__divider" aria-hidden="true">
             <span class="section-header__divider-line"></span>
@@ -188,15 +188,67 @@
             <span class="section-header__divider-line"></span>
           </div>
           <p class="section-header__desc">
-            Each creation is an exquisite balance of heritage technique and modern silhouette, designed to be treasured for generations.
+            Explore our heritage craftsmanship across three iconic realms: BIS 916 Hallmarked Pure Gold, Certified Natural Diamonds, and 925 Artisan Sterling Silver.
           </p>
         </header>
+
+        <!-- 3 Highlighted Collections (Gold, Diamond, Silver) -->
+        <div class="collection-spotlights-grid reveal-on-scroll" aria-label="Featured Collection Realms">
+          <!-- Gold Spotlight -->
+          <article class="collection-spotlight-card collection-spotlight-card--gold" data-filter="gold" tabindex="0" role="button" aria-label="Explore Gold Collection">
+            <div class="collection-spotlight-card__media">
+              <img src="assets/images/hero_jewelry.jpg" alt="Pure Gold Jewellery Collection" loading="lazy" />
+              <div class="collection-spotlight-card__overlay"></div>
+            </div>
+            <div class="collection-spotlight-card__content">
+              <span class="collection-spotlight-card__tag">BIS 916 • 22K &amp; 24K</span>
+              <h3 class="collection-spotlight-card__title">Gold Collection</h3>
+              <p class="collection-spotlight-card__desc">Timeless temple jewellery, bridal suites, and hallmarked pure yellow gold masterworks.</p>
+              <span class="collection-spotlight-card__link">
+                View Gold Pieces <span aria-hidden="true">→</span>
+              </span>
+            </div>
+          </article>
+
+          <!-- Diamond Spotlight -->
+          <article class="collection-spotlight-card collection-spotlight-card--diamond" data-filter="diamond" tabindex="0" role="button" aria-label="Explore Diamond Collection">
+            <div class="collection-spotlight-card__media">
+              <img src="assets/images/midnight_reserve.jpg" alt="Certified Diamond Jewellery Collection" loading="lazy" />
+              <div class="collection-spotlight-card__overlay"></div>
+            </div>
+            <div class="collection-spotlight-card__content">
+              <span class="collection-spotlight-card__tag">VVS Clarity • Solitaires</span>
+              <h3 class="collection-spotlight-card__title">Diamond Collection</h3>
+              <p class="collection-spotlight-card__desc">Rare cushion-cut natural black diamonds, champagne suites, and custom solitaires.</p>
+              <span class="collection-spotlight-card__link">
+                View Diamond Pieces <span aria-hidden="true">→</span>
+              </span>
+            </div>
+          </article>
+
+          <!-- Silver Spotlight -->
+          <article class="collection-spotlight-card collection-spotlight-card--silver" data-filter="silver" tabindex="0" role="button" aria-label="Explore Silver Collection">
+            <div class="collection-spotlight-card__media">
+              <img src="assets/images/silver_collection.jpg" alt="Artisan 925 Silver Jewellery Collection" loading="lazy" />
+              <div class="collection-spotlight-card__overlay"></div>
+            </div>
+            <div class="collection-spotlight-card__content">
+              <span class="collection-spotlight-card__tag">925 Pure Sterling</span>
+              <h3 class="collection-spotlight-card__title">Silver Collection</h3>
+              <p class="collection-spotlight-card__desc">Regal handcrafted filigree chokers, antique engraved peacock kadagams, and silver sets.</p>
+              <span class="collection-spotlight-card__link">
+                View Silver Pieces <span aria-hidden="true">→</span>
+              </span>
+            </div>
+          </article>
+        </div>
 
         <!-- Category Filter Tabs -->
         <div class="category-filter reveal-on-scroll" role="tablist" aria-label="Collection categories">
           <button type="button" class="filter-btn is-active" data-filter="all" id="filter-all">All Masterpieces</button>
-          <button type="button" class="filter-btn" data-filter="necklaces" id="filter-necklaces">Necklaces &amp; Chokers</button>
-          <button type="button" class="filter-btn" data-filter="rings" id="filter-rings">Rings &amp; Solitaires</button>
+          <button type="button" class="filter-btn" data-filter="gold" id="filter-gold">Gold Collection</button>
+          <button type="button" class="filter-btn" data-filter="diamond" id="filter-diamond">Diamond Collection</button>
+          <button type="button" class="filter-btn" data-filter="silver" id="filter-silver">Silver Collection</button>
         </div>
 
         <!-- Dynamic Product Grid -->

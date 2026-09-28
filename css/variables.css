@@ -25,11 +25,16 @@
   --color-accent-purple: #70436F;    /* Muted Royal Purple */
   --color-accent-purple-light: #8E5D8D;
   --color-accent-emerald: #1B4D3E;   /* Royal Emerald Green */
+  --color-silver: #E0E2E5;           /* 925 Sterling Silver */
+  --color-silver-dark: #8C939E;      /* Antique Oxidized Silver */
+  --color-diamond: #D5E8F7;          /* Diamond Ice Blue */
 
-  /* Gold Gradients */
+  /* Gold, Silver & Diamond Gradients */
   --gradient-gold: linear-gradient(135deg, #D8B866 0%, #C9A24A 50%, #A8812E 100%);
   --gradient-gold-radial: radial-gradient(circle at center, #D8B866 0%, #C9A24A 70%, #A8812E 100%);
-  --gradient-dark-overlay: linear-gradient(180deg, rgba(18, 18, 18, 0.4) 0%, rgba(18, 18, 18, 0.85) 100%);
+  --gradient-silver: linear-gradient(135deg, #FFFFFF 0%, #DCE0E6 50%, #A4ACB9 100%);
+  --gradient-diamond: linear-gradient(135deg, #FFFFFF 0%, #E8F1FC 50%, #B6D5F2 100%);
+  --gradient-dark-overlay: linear-gradient(180deg, rgba(18, 18, 18, 0.2) 0%, rgba(18, 18, 18, 0.88) 100%);
   --gradient-ivory-sheen: linear-gradient(180deg, #F9F6EF 0%, #FFFFFF 50%, #F9F6EF 100%);
   --gradient-shimmer: linear-gradient(90deg, rgba(201, 162, 74, 0) 0%, rgba(201, 162, 74, 0.25) 50%, rgba(201, 162, 74, 0) 100%);
 
